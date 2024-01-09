@@ -4,9 +4,9 @@ services:
   grafana:
     image: grafana/grafana:10.2.1
     container_name: grafana
-#    volumes:
+    volumes:
 #      - "./grafana/definitions:/var/lib/grafana/dashboards"
-#      - "./grafana/provisioning:/etc/grafana/provisioning"
+      - "./grafana/provisioning:/etc/grafana/provisioning"
     ports:
       - "3000:3000"
     environment:

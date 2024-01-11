@@ -82,7 +82,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -95,7 +96,7 @@
       },
       "gridPos": {
         "h": 8,
-        "w": 12,
+        "w": 24,
         "x": 0,
         "y": 1
       },
@@ -137,7 +138,7 @@
       },
       "id": 2,
       "panels": [],
-      "title": "Row title",
+      "title": "Logs",
       "type": "row"
     },
     {
@@ -146,8 +147,8 @@
         "uid": "loki"
       },
       "gridPos": {
-        "h": 8,
-        "w": 12,
+        "h": 9,
+        "w": 24,
         "x": 0,
         "y": 10
       },
@@ -193,6 +194,6 @@
   "timezone": "",
   "title": "Loki",
   "uid": "b23f3e4d-220d-49b1-86b0-81e6fbd334bd",
-  "version": 3,
+  "version": 5,
   "weekStart": ""
 }

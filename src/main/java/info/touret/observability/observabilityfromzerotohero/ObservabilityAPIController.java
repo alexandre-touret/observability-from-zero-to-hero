@@ -22,7 +22,7 @@ public class ObservabilityAPIController {
         this.observabilityService = observabilityService;
     }
 
-    @GetMapping("/api/event")
+    @GetMapping("/api/events")
     public ResponseEntity<ObservabilityEventDto> getEvent() throws ErrorResponseException {
         try {
             observabilityService.breakMethod();

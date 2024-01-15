@@ -22,7 +22,7 @@
             </label>
             <message>
                 <pattern>
-                    {"level":"%level","traceId":"%X{trace_id}","spanId":"%X{span_id}","class":"%logger{36}","thread":"%thread","message": "%message","requestId": "%X{X-Request-ID}"}
+                    {"level":"%level","TraceID":"%X{trace_id}","spanId":"%X{span_id}","class":"%logger{36}","thread":"%thread","message": "%message","requestId": "%X{X-Request-ID}"}
                 </pattern>
             </message>
         </format>

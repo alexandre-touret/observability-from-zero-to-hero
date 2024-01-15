@@ -9,8 +9,8 @@ datasources:
     jsonData:
         maxLines: 1000
         derivedFields:
-          - datasourceUid: Tempo
-            matcherRegex: '"traceId": "(\\w+)"'
+          - datasourceUid: tempo
+            matcherRegex: '\"TraceID\": \"(\w+).*\"'
             name: TraceID
             # url will be interpreted as query for the datasource
             url: '$${__value.raw}'

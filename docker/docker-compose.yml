@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   grafana:
-    image: grafana/grafana:10.2.1
+    image: grafana/grafana:latest
     container_name: grafana
     volumes:
 #      - "./grafana/definitions:/var/lib/grafana/dashboards"
@@ -15,7 +15,7 @@ services:
       - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
       - GF_AUTH_DISABLE_LOGIN_FORM=true
   tempo:
-    image: grafana/tempo:2.3.0
+    image: grafana/tempo:latest
     container_name: tempo
     ports:
       - "3200:3200"
@@ -32,7 +32,7 @@ services:
   # The Loki service stores logs sent to it, and takes queries from Grafana
   # to visualise those logs.
   loki:
-    image: grafana/loki:2.9.2
+    image: grafana/loki:latest
     container_name: loki
     ports:
       - "3100:3100"

@@ -29,10 +29,9 @@ datasources:
         datasourceUid: 'Mimir'
       tracesToLogs:
         datasourceUid: loki
-        filterByTraceID: false
-        spanEndTimeShift: "500ms"
-        spanStartTimeShift: "-500ms"
-        tags: ['beast']
+        filterByTraceID: true
+        filterBySpanID: false
+        mapTagNamesEnabled: false
 
   - name: Mimir
     type: prometheus
@@ -42,6 +41,6 @@ datasources:
     jsonData:
       exemplarTraceIdDestinations:
         - datasourceUid: tempo
-          name: traceID
+          name: TraceID
       httpMethod: POST
       timeInterval: "2s"

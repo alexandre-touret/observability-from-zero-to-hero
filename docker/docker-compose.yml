@@ -36,3 +36,16 @@ services:
     container_name: loki
     ports:
       - "3100:3100"
+
+  prometheus:
+    image: prom/prometheus
+    container_name: prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+    ports:
+      - 9090:9090
+    restart: unless-stopped
+    volumes:
+      - "./prometheus:/etc/prometheus"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
